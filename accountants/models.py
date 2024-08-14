@@ -78,8 +78,8 @@ class Transcations(models.Model):
 
 
 class Accounts(models.Model):
-    accoutant = models.ForeignKey(Users, on_delete=models.RESTRICT)
-    balance = models.DecimalField()
+    accountant = models.ForeignKey(Users, on_delete=models.RESTRICT)
+    balance = models.DecimalField(max_digits=19, decimal_places=10)
     updated_at = models.DateTimeField(
         auto_now_add=True
     )  # should it be auto_now_add for updates?
