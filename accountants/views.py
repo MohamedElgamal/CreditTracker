@@ -11,14 +11,14 @@ class CountryCreateView(CreateView):
     model = Countries
     form_class = CountriesForm
     template_name = "countries-create.html"
-    success_url = reverse_lazy("create_countries")
+    success_url = reverse_lazy("create_country")
 
 
 class PersonsCreateView(CreateView):
     model = Persons
     form_class = PersonsForm
     template_name = "persons-create.html"
-    success_url = reverse_lazy("create_persons")
+    success_url = reverse_lazy("create_person")
 
     def form_valid(self, form):
         print("Before save")

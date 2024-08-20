@@ -21,7 +21,7 @@ from .views import PersonsCreateView, CountryCreateView, PersonsListView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("create-persons/", PersonsCreateView.as_view(), name="create_persons"),
-    path("create-countries", CountryCreateView.as_view(), name="create_countries"),
+    path("create-person/", PersonsCreateView.as_view(), name="create_person"),
+    path("create-country", CountryCreateView.as_view(), name="create_country"),
     path("list-persons", PersonsListView.as_view(), name="persons_list"),
 ]

@@ -21,7 +21,7 @@ class Persons(models.Model):
     amount = models.PositiveSmallIntegerField()  # This value should be smalle pos int
     nationality = models.ForeignKey(Countries, on_delete=models.CASCADE)
     suspended = models.BooleanField(default=False)
-    suspend_reason = models.TextField()
+    suspend_reason = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
